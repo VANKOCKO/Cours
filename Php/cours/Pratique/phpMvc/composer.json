@@ -1,0 +1,15 @@
+{
+    "name": "van/php-mvc",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "van kocko",
+            "email": "van.kocko@gmail.com"
+        }
+    ],
+    "require": {}
+}

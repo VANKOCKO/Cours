@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../phpUnit"
+		},
+		{
+			"path": "../../../../../../Grafikart/Php/Symfony/tuto/doctrineRelashionship"
+		}
+	],
+	"settings": {}
+}
