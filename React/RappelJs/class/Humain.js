@@ -1,7 +1,5 @@
 export class Human {
-    constructor(){
-        this.gender = 'male';
-    }
+    gender = 'male';
     printGender = () => { console.log(this.gender)}
 }
 
