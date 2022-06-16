@@ -1,0 +1,22 @@
+/*
+     #Cible precise superieur a une cible h1 ou autres 
+     #La regle la plus precise qui l'emporte
+     #Cibler une class est plus specifique que cibler un element 
+*/
+/* precise le nom de la class*/
+.title-big{
+    color: red;
+}
+/* couleur sur le h1*/
+h1 {
+    color:  green;
+}
+
+
+/** selecteur voisin direct 
+    Voisiin direct de h2 
+**/
+
+h2 + p {
+    color: green;
+}
