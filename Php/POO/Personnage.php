@@ -1,25 +1,111 @@
 <?php 
 
-class Personnage {
-    public $vie = 80;
-    public $atk = 20;
-    public $nom;
-
-
+/**
+ * Personnage
+ */
+class Personnage { 
     /**
-     *  constructeur 
+     * vie
+     *
+     * @var int
+     */
+    private $vie = 80;    
+    /**
+     * atk
+     *
+     * @var int
+     */
+    private $atk = 20;    
+    /**
+     * nom
+     *
+     * @var mixed
+     */
+    private $nom;
+    /**
+     * __construct
+     *
+     * @param  mixed $nom
+     * @return void
      */
     public function __construct($nom){
        $this->nom = $nom;
+    } 
+    /**
+     * getNom
+     *
+     * @return void
+     */
+    public function getNom(){
+        return $this->nom;
+    }     
+    /**
+     * setNom
+     *
+     * @param  mixed $nom
+     * @return void
+     */
+    public function setNom($nom){
+            $this->nom = $nom;
+    }
+        
+    /**
+     * getVie
+     *
+     * @return void
+     */
+    public function getVie(){
+        return $this->vie;
+    }
+    /**
+     * setVie
+     *
+     * @param  mixed $vie
+     * @return void
+     */
+    public  function setVie($vie)
+    {
+        $this->vie = $vie;
     }
     
+    /**
+     * getAtk
+     *
+     * @return void
+     */
+    public function  getAtk(){
+        return $this->atk;
+    }
+    
+    /**
+     * setAtk
+     *
+     * @param  mixed $atk
+     * @return void
+     */
+    public  function setAtk($atk)
+    {
+        $this->atk = $atk;
+    }
+    /**
+     * regenerer
+     *
+     * @param  mixed $vie
+     * @return void
+     */
     public function regenerer($vie = null){
         if(is_null($vie)){
             $this->vie = 100; 
         }else{
             $this->vie += $vie;
         }
-    }
+    }    
+    /**
+     * mort
+     *
+     * @param  mixed $personnage
+     * @return void
+     */
     public function mort($personnage){
         if($personnage->vie == 0){
             echo "Le personnage du nom de : " .  $personnage->nom ." "." est mort";
@@ -29,12 +115,30 @@ class Personnage {
         }
            
     }
-
+    
+    /**
+     * attaque
+     *
+     * @param  mixed $cible
+     * @return void
+     */
     public function attaque($cible){
-        $cible->vie = 20;
-      echo "<pre>";
+        $cible->vie -= $this->atk;
+        $cible->empecher_negatif();
+      /* echo "<pre>";
         print_r($cible);
-      echo "</pre>";
+      echo "</pre>"; */
+    }
+    
+    /**
+     * empecher_negatif
+     *
+     * @return void
+     */
+    private function empecher_negatif(){
+        if($this->vie < 0 ) {
+            $this->vie = 0 ;
+        }
     }
 } 
 
