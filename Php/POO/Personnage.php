@@ -9,19 +9,19 @@ class Personnage {
      *
      * @var int
      */
-    private $vie = 80;    
+    protected $vie = 80;    
     /**
      * atk
      *
      * @var int
      */
-    private $atk = 20;    
+    protected $atk = 20;    
     /**
      * nom
      *
      * @var mixed
      */
-    private $nom;
+    protected $nom;
     /**
      * __construct
      *
@@ -135,7 +135,7 @@ class Personnage {
      *
      * @return void
      */
-    private function empecher_negatif(){
+    protected function empecher_negatif(){
         if($this->vie < 0 ) {
             $this->vie = 0 ;
         }

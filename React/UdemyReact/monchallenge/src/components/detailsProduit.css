@@ -1,0 +1,30 @@
+.detailsProduit {
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+}
+.produitDate {
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+}
+.produitTitre {
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+}
+.produitDescription {
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+}
+.produitPrix {
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+}
+
+
+
+
